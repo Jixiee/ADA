@@ -4,7 +4,7 @@
 Welcome to the Analysis and Design of Algorithms (ADA) repository! This repository contains a collection of notes and code snippets related to various algorithms, algorithmic techniques, and their analysis. Whether you're a student studying algorithms or a developer looking to refresh your algorithmic knowledge, you'll find valuable resources here.
 
 ## Table of Contents
-
+### Notes
 1. [Introduction to Algorithms](#Introduction_To_Algorithms)
 2. [Sorting Algorithms](#Sorting_Algorithms)
 3. [Searching Algorithms](#Searching_Algorithms)
@@ -12,6 +12,14 @@ Welcome to the Analysis and Design of Algorithms (ADA) repository! This reposito
 5. [Greedy Algorithms](#Greedy_Algorithms)
 6. [Dynamic Programming](#Dynamic_Programming)
 7. [Graph Algorithms](#graph_algorithms)
+
+### Codes
+1. [Binary Search Iterative](#Binary_Search_Iterative.c)
+2. [Binary Search Recursive](#Binary_Search_Recursive.c)
+3. [Selection Sort](#Selection_Sort.c)
+4. [Quick Sort](#Quick_Sort.c)
+5. [Merge Sort](#Merge_Sort.c)
+6. [Fractional Knapsack](#Fractional_Knapsack.c)
 
 ## Usage
 
