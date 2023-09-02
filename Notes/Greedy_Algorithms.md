@@ -5,8 +5,9 @@ Greedy algorithms are a class of algorithms that make a series of choices at eac
 - Fractional Knapsack Problem
 - Job Scheduling with Deadlines
 
-## 1.) Greedy Algorithm for Minimum Spanning Trees (Prim's and Kruskal's algorithms)
-### Problem: Finding the minimum spanning tree in a connected, undirected graph.
+## 1. Greedy Algorithm for Minimum Spanning Trees (Prim's and Kruskal's algorithms)
+### Problem: 
+Finding the minimum spanning tree in a connected, undirected graph.
 
 ### Algorithm:
 
@@ -30,7 +31,8 @@ Greedy algorithms are a class of algorithms that make a series of choices at eac
 - They are also used in clustering algorithms, image segmentation, and solving problems involving minimal spanning cost.
 
 ## 2. Dijkstra's Algorithm
-### Problem: Finding the shortest path between two nodes in a weighted graph.
+### Problem:
+Finding the shortest path between two nodes in a weighted graph.
 
 ### Algorithm:
 
@@ -47,4 +49,41 @@ Greedy algorithms are a class of algorithms that make a series of choices at eac
 - It is employed in GPS systems and map services to find the shortest route between two locations.
 - It also finds applications in transportation and logistics for optimizing routes and schedules.
 
-  
+ ## 3. Fractional Knapsack Problem
+### Problem: 
+Given a set of items with weights and values and a maximum weight capacity, select a subset of items to maximize the total value without exceeding the weight capacity.
+
+### Algorithm:
+
+- Calculate the value-to-weight ratio for each item.
+- Sort the items in descending order of this ratio.
+- Initialize the current weight as 0 and the total value as 0.
+- Iterate through the sorted items.
+- For each item, add as much of it as possible to the knapsack without exceeding the weight capacity.
+- Update the current weight and total value accordingly.
+- Continue this process until the knapsack is full or all items are included.
+### Applications:
+
+- The fractional knapsack problem finds applications in various resource allocation scenarios, such as:
+   - Stock portfolio optimization (maximizing returns within a budget constraint).
+   - Cutting stock problems (cutting materials to minimize waste).
+   - Loading cargo containers for transportation (maximizing value within weight limits).
+     
+## 4. Job Scheduling with Deadlines
+### Problem: 
+Given a set of jobs with deadlines and profits, find the maximum profit that can be obtained by scheduling the jobs within their respective deadlines.
+
+### Algorithm:
+
+- Sort the jobs in descending order of their profit-to-deadline ratio.
+- Initialize a schedule and profit variables.
+= Iterate through the sorted jobs.
+- For each job, place it in the schedule at the latest possible time before its deadline.
+- Update the profit and schedule accordingly.
+- Continue this process until all jobs are scheduled or no more slots are available.
+### Applications:
+
+- Job scheduling with deadlines is applicable in various domains:
+   - Task scheduling in operating systems and real-time systems.
+   - Project management to maximize project profits.
+   - Scheduling jobs on machines to optimize resource utilization.
