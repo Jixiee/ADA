@@ -43,18 +43,3 @@
 ### Collision Handling
 - Collisions occur when two different keys produce the same hash code.
 - Common collision resolution techniques include chaining (using linked lists) and open addressing.
-## Divide and Conquer
-### Overview
-- Divide and Conquer is a problem-solving technique that involves breaking a problem into smaller, more manageable subproblems.
-- It is widely used in algorithms and computational mathematics.
-### Steps
-- ```Divide:``` Break the problem into smaller, similar subproblems.
-- ```Conquer:``` Solve the subproblems independently.
-- ```Combine:``` Combine the solutions of subproblems to solve the original problem.
-### Examples
-- ```Merge Sort:``` Divides an array into smaller arrays, sorts them, and then merges them back together.
-- ```Quick Sort:``` Divides an array into smaller subarrays and recursively sorts them.
-- ```Binary Search:```  Breaks the search space into two halves.
-### Time Complexity
-- The time complexity of divide and conquer algorithms varies depending on the problem but is often efficient.
-- Common time complexities include O(n log n) for sorting algorithms like Merge Sort and Quick Sort.
