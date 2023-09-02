@@ -1,17 +1,64 @@
 # Divide and Conquer
-## Introduction
 Divide and Conquer is a fundamental algorithmic paradigm that breaks down a problem into smaller subproblems, solves each subproblem independently, and then combines the solutions to obtain the final result. This approach is widely used in various computer science and computational tasks. This repository named "Divide and Conquer," aims to explore and implement some important Divide and Conquer algorithms, with a particular focus on Binary Search, Merge Sort, and quick sort.
 
 ## Binary Search
-Binary Search is a classic divide and conquer algorithm used to efficiently search for an element in a sorted array. Here's a brief overview of the binary search algorithm:
+### Introduction
+Binary Search is a fundamental and efficient searching algorithm used to locate a specific element within a sorted array or list. This algorithm is based on the divide-and-conquer paradigm and is known for its logarithmic time complexity. Binary Search works by repeatedly dividing the search space in half and comparing the target element with the middle element to determine if it is in the left or right subarray.
 
-- Begin with a sorted array of elements.
-- Compare the target element with the middle element of the array.
-- If the target is equal to the middle element, you've found it.
-- If the target is less than the middle element, repeat the process on the left half of the array.
-- If the target is greater than the middle element, repeat the process on the right half of the array.
-- Continue this process until the target is found or the search space becomes empty.
+### Working Principle
+The Binary Search algorithm works as follows:
 
+- `Initialization:` Begin with a sorted array or list of elements and a target element to search for.
+
+- `Set Boundaries:` Initialize two pointers, left and right, which represent the indices of the current search space. Set left to 0 and right to the index of the last element in the array.
+
+- `Divide and Compare:`
+
+   - Calculate the middle index as mid = (left + right) // 2.
+
+   - Compare the target element with the middle element (arr[mid]).
+
+   - If the target matches the middle element, you have found it and can return its index.
+
+   - If the target is less than the middle element, update right = mid - 1 to search in the left subarray.
+
+   - If the target is greater than the middle element, update left = mid + 1 to search in the right subarray.
+
+- `Repeat:` Continue dividing the search space and comparing until either the target is found or the search space becomes empty (left > right).
+
+- `Result:` If the target element is found, return its index; otherwise, return -1 to indicate that the element is not in the array.
+
+### Step-by-Step Execution
+Let's go through a step-by-step example of Binary Search:
+
+Suppose we have a sorted array: `[1, 2, 3, 4, 5, 6, 7, 8]`, and we want to find the target element `5`.
+
+- `Initialization:` left = 0, right = 7 (indices of the first and last elements).
+
+- `Divide and Compare:`
+
+   - Calculate mid = (0 + 7) // 2 = 3.
+
+   - Compare 5 with arr[3] (4).
+
+   - Since 5 is greater than 4, update left = 3 + 1 = 4.
+
+- `Divide and Compare:`
+
+    - Calculate mid = (4 + 7) // 2 = 5.
+
+    - Compare 5 with arr[5] (6).
+
+    - Since 5 is less than 6, update right = 5 - 1 = 4.
+
+- `Result:` Now, left and right both point to index 4, and the search space is empty (left > right). The algorithm terminates.
+
+- `Result:` The target element 5 is found at index 4.
+
+### Complexity Analysis
+Binary Search is known for its efficiency, with a time complexity of O(log n), where 'n' is the number of elements in the sorted array. This logarithmic time complexity means that Binary Search is very efficient even for large datasets. However, it is essential to note that the array or list must be sorted for Binary Search to work correctly.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## Merge Sort
 ### Introduction
 Merge Sort is a popular and efficient divide-and-conquer sorting algorithm. It is known for its stable sorting behavior and predictable performance characteristics. Merge Sort operates by dividing an unsorted array into smaller sub-arrays, sorting these sub-arrays, and then merging them back together to produce a fully sorted array.
@@ -30,18 +77,18 @@ Let's go through a step-by-step example of Merge Sort:
 
 Suppose we have an unsorted array: `[7, 2, 1, 6, 8, 5, 3, 4]`.
 
-- `Divide:`
+- ### Divide:
   - The array is divided into two equal-sized sub-arrays: `[7, 2, 1, 6]` and `[8, 5, 3, 4]`.
 
   - These sub-arrays are further divided into smaller sub-arrays until each sub-array contains only one element.
 
   - Recursive divisions result in sub-arrays: `[7] [2] [1] [6] [8] [5] [3] [4]`.
 
-- `Conquer:`
+- ### Conquer:
  
   - Each of the single-element sub-arrays is considered sorted.
   
-- `Combine (Merge):`
+- ### Combine (Merge):
 
   - The sorted sub-arrays are merged in pairs to create new sorted sub-arrays.
 
@@ -92,7 +139,7 @@ def merge(left, right):
     result.extend(right[j:])
     return result
 ```
-
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## Quick Sort
 ### Introduction
