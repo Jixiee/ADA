@@ -28,3 +28,23 @@ Greedy algorithms are a class of algorithms that make a series of choices at eac
 
 - These algorithms are widely used in network design, such as laying down cables, designing transportation networks, and optimizing infrastructure.
 - They are also used in clustering algorithms, image segmentation, and solving problems involving minimal spanning cost.
+
+## 2. Dijkstra's Algorithm
+### Problem: Finding the shortest path between two nodes in a weighted graph.
+
+### Algorithm:
+
+- Initialize the distance to the start node as 0 and all other distances as infinity.
+- Create a priority queue (or a min-heap) to keep track of nodes with the smallest tentative distance.
+- Start with the source node and explore its neighbors.
+- For each neighbor, calculate the tentative distance from the source node through the current node.
+- If this tentative distance is smaller than the previously assigned distance, update it.
+- Mark the current node as visited.
+- Repeat the process by selecting the unvisited node with the smallest tentative distance and continue until the target node is reached or all nodes are visited.
+### Applications:
+
+- Dijkstra's algorithm is widely used in network routing protocols like OSPF (Open Shortest Path First).
+- It is employed in GPS systems and map services to find the shortest route between two locations.
+- It also finds applications in transportation and logistics for optimizing routes and schedules.
+
+  
