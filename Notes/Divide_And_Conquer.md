@@ -1,7 +1,7 @@
 # Divide and Conquer
 Divide and Conquer is a fundamental algorithmic paradigm that breaks down a problem into smaller subproblems, solves each subproblem independently, and then combines the solutions to obtain the final result. This approach is widely used in various computer science and computational tasks. This repository named "Divide and Conquer," aims to explore and implement some important Divide and Conquer algorithms, with a particular focus on Binary Search, Merge Sort, and quick sort.
 
-## Binary Search
+## 1. Binary Search
 ### Introduction
 Binary Search is a fundamental and efficient searching algorithm used to locate a specific element within a sorted array or list. This algorithm is based on the divide-and-conquer paradigm and is known for its logarithmic time complexity. Binary Search works by repeatedly dividing the search space in half and comparing the target element with the middle element to determine if it is in the left or right subarray.
 
@@ -59,7 +59,7 @@ Suppose we have a sorted array: `[1, 2, 3, 4, 5, 6, 7, 8]`, and we want to find 
 Binary Search is known for its efficiency, with a time complexity of O(log n), where 'n' is the number of elements in the sorted array. This logarithmic time complexity means that Binary Search is very efficient even for large datasets. However, it is essential to note that the array or list must be sorted for Binary Search to work correctly.
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-## Merge Sort
+## 2. Merge Sort
 ### Introduction
 Merge Sort is a popular and efficient divide-and-conquer sorting algorithm. It is known for its stable sorting behavior and predictable performance characteristics. Merge Sort operates by dividing an unsorted array into smaller sub-arrays, sorting these sub-arrays, and then merging them back together to produce a fully sorted array.
 
@@ -141,7 +141,7 @@ def merge(left, right):
 ```
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-## Quick Sort
+## 3. Quick Sort
 ### Introduction
 Quick Sort is a widely used divide-and-conquer sorting algorithm known for its efficiency and versatility. It operates by selecting a "pivot" element from the array and partitioning the other elements into two sub-arrays according to whether they are less than or greater than the pivot. The sub-arrays are then sorted recursively.
 
