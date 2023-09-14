@@ -11,14 +11,14 @@ Finding the minimum spanning tree in a connected, undirected graph.
 
 ### Algorithm:
 
-  ### Prim's Algorithm:
+  ### I.) Prim's Algorithm:
 
 - Start with an arbitrary vertex as the initial minimum spanning tree.
 - At each step, choose the edge with the smallest weight that connects a vertex in the minimum spanning tree to a vertex outside the tree.
 - Add the chosen edge and the connected vertex to the minimum spanning tree.
 - Repeat the process until all vertices are included in the tree.
   
- ### Kruskal's Algorithm:
+ ### II.) Kruskal's Algorithm:
 
 - Start with an empty set of edges as the minimum spanning tree.
 - Sort all edges in the graph by their weights in ascending order.
