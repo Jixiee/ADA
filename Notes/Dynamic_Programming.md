@@ -31,3 +31,49 @@ int main() {
     return 0;
 }
 ```
+
+## 2. Longest Common Subsequence (LCS):
+
+The Longest Common Subsequence problem is a classic dynamic programming problem that involves finding the longest subsequence common to two sequences. A subsequence is a sequence that can be derived from another sequence by deleting some or no elements without changing the order of the remaining elements.
+
+### Dynamic Programming Approach:
+
+To solve the LCS problem, we can use a 2D array to store the length of the LCS for different prefixes of the input sequences.
+```
+#include <stdio.h>
+#include <string.h>
+
+int max(int a, int b) {
+    return (a > b) ? a : b;
+}
+
+int longest_common_subsequence(char X[], char Y[], int m, int n) {
+    int dp[m + 1][n + 1];
+
+    for (int i = 0; i <= m; i++) {
+        for (int j = 0; j <= n; j++) {
+            if (i == 0 || j == 0) {
+                dp[i][j] = 0;
+            } else if (X[i - 1] == Y[j - 1]) {
+                dp[i][j] = dp[i - 1][j - 1] + 1;
+            } else {
+                dp[i][j] = max(dp[i - 1][j], dp[i][j - 1]);
+            }
+        }
+    }
+
+    return dp[m][n];
+}
+
+int main() {
+    char X[] = "AGGTAB";
+    char Y[] = "GXTXAYB";
+    int m = strlen(X);
+    int n = strlen(Y);
+    int result = longest_common_subsequence(X, Y, m, n);
+    printf("Length of Longest Common Subsequence: %d\n", result);
+    return 0;
+}
+```
+
+## 
