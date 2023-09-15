@@ -75,5 +75,49 @@ int main() {
     return 0;
 }
 ```
+>> This algorithm uses a 2D array to store the lengths of LCS for different prefixes of the input sequences, and it efficiently computes the length of the LCS in O(mn) time, where m and n are the lengths of the input sequences
 
-## 
+
+## 3. 0-1 Knapsack Problem:
+
+The 0-1 Knapsack Problem is a classic optimization problem where we are given a set of items, each with a weight and a value, and a knapsack with a maximum weight capacity. The goal is to select a subset of items to maximize the total value while not exceeding the knapsack's weight capacity.
+
+### Dynamic Programming Approach:
+
+We can solve this problem using dynamic programming by creating a 2D array, where the rows represent the items and the columns represent the remaining weight capacities of the knapsack. We iteratively fill in this table to compute the maximum value.
+```
+#include <stdio.h>
+
+int max(int a, int b) {
+    return (a > b) ? a : b;
+}
+
+int knapsack_01(int values[], int weights[], int n, int capacity) {
+    int dp[n + 1][capacity + 1];
+
+    for (int i = 0; i <= n; i++) {
+        for (int w = 0; w <= capacity; w++) {
+            if (i == 0 || w == 0) {
+                dp[i][w] = 0;
+            } else if (weights[i - 1] <= w) {
+                dp[i][w] = max(dp[i - 1][w], dp[i - 1][w - weights[i - 1]] + values[i - 1]);
+            } else {
+                dp[i][w] = dp[i - 1][w];
+            }
+        }
+    }
+
+    return dp[n][capacity];
+}
+
+int main() {
+    int values[] = {60, 100, 120};
+    int weights[] = {10, 20, 30};
+    int n = sizeof(values) / sizeof(values[0]);
+    int capacity = 50;
+    int result = knapsack_01(values, weights, n, capacity);
+    printf("Maximum value in 0-1 Knapsack: %d\n", result);
+    return 0;
+}
+```
+>> This dynamic programming algorithm efficiently computes the maximum value that can be obtained in the 0-1 knapsack problem in O(n * capacity) time.
