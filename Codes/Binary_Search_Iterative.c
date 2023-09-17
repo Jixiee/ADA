@@ -22,9 +22,6 @@ return -1;
 int main()
 {
 printf("========================================");
-printf("\nName:<Your Name> \n");
-printf("Enrollment No.:<Enrollment Number> \n");
-printf("========================================");
 int a[20],i,n,key,pos;
 printf("\nEnter the number of Elements= ");
 scanf("%d",&n);
