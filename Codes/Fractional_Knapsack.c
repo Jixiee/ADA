@@ -45,9 +45,6 @@ items[i].value));
 }
 int main() {
  int n, capacity;
- printf("=============================================");
- printf("\n <Your Name>");
- printf("\n<Enrollment Number>");
  printf("\n=============================================");
  printf("\nEnter the number of items: ");
  scanf("%d", &n);
