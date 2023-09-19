@@ -21,8 +21,6 @@ void selectionSort(int arr[], int n) {
 }
 int main() {
  printf("========================================");
- printf("\nName:<Your Name> \nEnrollment no.:<Your Enrollment Number> \n");
- printf("========================================");
  int n, i;
  printf("\nEnter the number of elements in the array: ");
  scanf("%d", &n);
