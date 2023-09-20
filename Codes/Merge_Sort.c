@@ -43,9 +43,6 @@ void mergeSort(int arr[], int left, int right) {
 }
 int main() {
  int n;
- printf("=====================================");
- printf("\n <Your Name>");
- printf("\n <Enrollment Number>");
  printf("\n=====================================");
  printf("\nEnter the number of elements: ");
  scanf("%d", &n);
