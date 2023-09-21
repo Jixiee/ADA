@@ -5,9 +5,6 @@
 int binsearch(int[], int, int, int);
 int main() {
 printf("========================================");
-printf("\nName: <Your Name> \n");
-printf("En No. = <Enrollment Number> \n");
-printf("========================================");
 int num, i, key, position;
 int low, high, list[size];
 printf("\nEnter the total number of elements: ");
