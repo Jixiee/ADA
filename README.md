@@ -21,6 +21,7 @@ Welcome to the Analysis and Design of Algorithms (ADA) repository! This reposito
 5. [Merge Sort](#Merge_Sort.c)
 6. [Fractional Knapsack](#Fractional_Knapsack.c)
 7. [Kruskal's Algorithm](#Kruskal's_Algorithm.c)
+8. [Prim's Algorithm](Prim's_Algorithm.c)
 
 ## Usage
 
