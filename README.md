@@ -22,6 +22,7 @@ Welcome to the Analysis and Design of Algorithms (ADA) repository! This reposito
 6. [Fractional Knapsack](#Fractional_Knapsack.c)
 7. [Kruskal's Algorithm](#Kruskal's_Algorithm.c)
 8. [Prim's Algorithm](Prim's_Algorithm.c)
+9. [Strassen's Matrix Multiplication](Strassen's_Matrix_Multiplication.c)
 
 ## Usage
 
