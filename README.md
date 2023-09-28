@@ -21,15 +21,13 @@ Welcome to the Analysis and Design of Algorithms (ADA) repository! This reposito
 5. [Merge Sort](#Merge_Sort.c)
 6. [Fractional Knapsack](#Fractional_Knapsack.c)
 7. [Kruskal's Algorithm](#Kruskal's_Algorithm.c)
-8. [Prim's Algorithm](Prim's_Algorithm.c)
-9. [Strassen's Matrix Multiplication](Strassen's_Matrix_Multiplication.c)
+8. [Prim's Algorithm](#Prim's_Algorithm.c)
+9. [Strassen's Matrix Multiplication](#Strassen's_Matrix_Multiplication.c)
 
 ## Usage
-
 Browse through the directories to find notes written in Markdown format and code snippets implemented in various programming languages. Each section covers different algorithms, techniques, or topics. Feel free to explore, learn, and even contribute!
 
 ## Contributing
-
 Contributions are welcome! If you have additional notes, better explanations, or more efficient code snippets, please consider opening a pull request. Be sure to follow the [contribution guidelines](CONTRIBUTING.md).
 
 
