@@ -1,6 +1,5 @@
 # ADA
 # Analysis and Design of Algorithms (ADA) Notes and Code Snippets
-
 Welcome to the Analysis and Design of Algorithms (ADA) repository! This repository contains a collection of notes and code snippets related to various algorithms, algorithmic techniques, and their analysis. Whether you're a student studying algorithms or a developer looking to refresh your algorithmic knowledge, you'll find valuable resources here.
 
 ## Table of Contents
