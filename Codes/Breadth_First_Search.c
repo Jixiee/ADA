@@ -1,68 +1,85 @@
 //Implementation of Breadth First Search in c 
 #include <stdio.h>
-#include <stdbool.h>
-#define MAX_VERTICES 10
-#define INF 999999
-int minDistance(int dist[], bool visited[], int vertices) {
-    int min = INF, min_index;
-    for (int v = 0; v < vertices; v++) {
-        if (!visited[v] && dist[v] < min) {
-            min = dist[v];
-            min_index = v;
-        }
-    }
-    return min_index;
+#include <stdlib.h>
+#define MAX_QUEUE_SIZE 100
+struct Queue {
+    int items[MAX_QUEUE_SIZE];
+    int front;
+    int rear;
+};
+struct Queue* createQueue() {
+    struct Queue* queue = (struct Queue*)malloc(sizeof(struct Queue));
+    queue->front = -1;
+    queue->rear = -1;
+    return queue;
 }
-void printSolution(int dist[], int parent[], int vertices, int source) {
-    printf("Vertex\tDistance\tPath\n");
-    for (int i = 0; i < vertices; i++) {
-        if (i != source) {
-            printf("%d -> %d\t%d\t\t%d", source, i, dist[i], source);
-            int j = i;
-            while (parent[j] != source) {
-                printf(" -> %d", parent[j]);
-                j = parent[j];
-            }
-            printf(" -> %d\n", i);
+int isEmpty(struct Queue* queue) {
+    return (queue->front == -1);
+}
+void enqueue(struct Queue* queue, int value) {
+    if (queue->rear == MAX_QUEUE_SIZE - 1) {
+        printf("Queue is full\n");
+    } else {
+        if (queue->front == -1) {
+            queue->front = 0;
         }
+        queue->rear++;
+        queue->items[queue->rear] = value;
     }
 }
-void dijkstra(int graph[MAX_VERTICES][MAX_VERTICES], int vertices, int source) {
-    int dist[vertices];
-    bool visited[vertices];
-    int parent[vertices];
-    for (int i = 0; i < vertices; i++) {
-        dist[i] = INF;
-        visited[i] = false;
+int dequeue(struct Queue* queue) {
+    int item;
+    if (isEmpty(queue)) {
+        printf("Queue is empty\n");
+        item = -1;
+    } else {
+        item = queue->items[queue->front];
+        queue->front++;
+        if (queue->front > queue->rear) {
+            queue->front = queue->rear = -1;
+        }
     }
-    dist[source] = 0;
-    parent[source] = -1;
-    for (int count = 0; count < vertices - 1; count++) {
-        int u = minDistance(dist, visited, vertices);
-        visited[u] = true;
-        for (int v = 0; v < vertices; v++) {
-            if (!visited[v] && graph[u][v] && dist[u] + graph[u][v] < dist[v]) {
-                dist[v] = dist[u] + graph[u][v];
-                parent[v] = u;
+    return item;
+}
+void BFS(int adjacency_matrix[][100], int vertices, int start_vertex) {
+    int visited[vertices];
+    for (int i = 0; i < vertices; i++) {
+        visited[i] = 0;
+    }
+    struct Queue* queue = createQueue();
+    visited[start_vertex] = 1;
+    printf("Breadth First Traversal starting from vertex %d: ", start_vertex);
+    printf("%d ", start_vertex);
+    enqueue(queue, start_vertex);
+    while (!isEmpty(queue)) {
+        int current_vertex = dequeue(queue);
+        for (int i = 0; i < vertices; i++) {
+            if (adjacency_matrix[current_vertex][i] == 1 && !visited[i]) {
+                printf("%d ", i);
+                visited[i] = 1;
+                enqueue(queue, i);
             }
         }
     }
-
-    printSolution(dist, parent, vertices, source);
+    printf("\n");
 }
 int main() {
-    int vertices, source;
+    int vertices, start_vertex;
+    printf("----------------------------------------------------\n");
+    printf("Name=, \nEn No.=");
+    printf("\n-------------------------------------------------------\n");
     printf("Enter the number of vertices: ");
     scanf("%d", &vertices);
-    int graph[MAX_VERTICES][MAX_VERTICES];
+    int adjacency_matrix[100][100];
     printf("Enter the adjacency matrix:\n");
     for (int i = 0; i < vertices; i++) {
         for (int j = 0; j < vertices; j++) {
-            scanf("%d", &graph[i][j]);
+            scanf("%d", &adjacency_matrix[i][j]);
         }
     }
-    printf("Enter the source vertex: ");
-    scanf("%d", &source);
-    dijkstra(graph, vertices, source);
+    printf("Enter the starting vertex: ");
+    scanf("%d", &start_vertex);
+    BFS(adjacency_matrix, vertices, start_vertex);
+    printf("----------------------------------------------------\n");
     return 0;
 }
