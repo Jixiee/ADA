@@ -48,11 +48,9 @@ int main() {
 
 
 ## 2. 0-1 Knapsack Problem:
-
 The 0-1 Knapsack Problem is a classic optimization problem where we are given a set of items, each with a weight and a value, and a knapsack with a maximum weight capacity. The goal is to select a subset of items to maximize the total value while not exceeding the knapsack's weight capacity.
 
 ### Dynamic Programming Approach:
-
 We can solve this problem using dynamic programming by creating a 2D array, where the rows represent the items and the columns represent the remaining weight capacities of the knapsack. We iteratively fill in this table to compute the maximum value.
 ```
 #include <stdio.h>
@@ -93,6 +91,8 @@ int main() {
 
 ## 4. Matrix Chain Multiplication:
 The Matrix Chain Multiplication problem involves finding the most efficient way to multiply a given set of matrices.
+
+### Dynamic programming approach
 Dynamic programming introduces a 2D array to store and reuse results.
 ```
 def matrix_chain_dynamic(p):
