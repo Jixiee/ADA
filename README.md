@@ -27,6 +27,7 @@ Welcome to the Analysis and Design of Algorithms (ADA) repository! This reposito
 12. [Longest Common Subsequence](#Longest_Common_Subsequence.c)
 13. [Breadth First Search](#Breadth_First_Search.c)
 14. [Depth First Search](#Depth_First_Search.c)
+15. [N-Queen Problem](#N-queen.c)
 
 
 ## Usage
