@@ -6,9 +6,9 @@ Welcome to the Analysis and Design of Algorithms (ADA) repository! This reposito
 ### Notes
 1. [Introduction to Algorithms](Notes/Introduction_To_Algorithms)
 2. [Sorting Algorithms](Notes/Sorting_Algorithms)
-3. [Searching Algorithms](#Searching_Algorithms)
-4. [Divide and Conquer](#Divide_And_Conquer)
-5. [Greedy Algorithms](#Greedy_Algorithms)
+3. [Searching Algorithms](NotesSearching_Algorithms)
+4. [Divide and Conquer](Notes/Divide_And_Conquer)
+5. [Greedy Algorithms](Notes/Greedy_Algorithms)
 6. [Dynamic Programming](#Dynamic_Programming)
 7. [Graph Algorithms](#graph_algorithms)
 
