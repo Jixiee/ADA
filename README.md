@@ -4,7 +4,7 @@ Welcome to the Analysis and Design of Algorithms (ADA) repository! This reposito
 
 ## Table of Contents
 ### Notes
-1. [Introduction to Algorithms](#Introduction_To_Algorithms)
+1. [Introduction to Algorithms](Notes/Introduction_To_Algorithms)
 2. [Sorting Algorithms](#Sorting_Algorithms)
 3. [Searching Algorithms](#Searching_Algorithms)
 4. [Divide and Conquer](#Divide_And_Conquer)
