@@ -9,8 +9,8 @@ Welcome to the Analysis and Design of Algorithms (ADA) repository! This reposito
 3. [Searching Algorithms](NotesSearching_Algorithms)
 4. [Divide and Conquer](Notes/Divide_And_Conquer)
 5. [Greedy Algorithms](Notes/Greedy_Algorithms)
-6. [Dynamic Programming](#Dynamic_Programming)
-7. [Graph Algorithms](#graph_algorithms)
+6. [Dynamic Programming](Notes/Dynamic_Programming)
+7. [Graph Algorithms](Notes/graph_algorithms)
 
 ### Codes
 1. [Binary Search Iterative](#Binary_Search_Iterative.c)
