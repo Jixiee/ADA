@@ -13,9 +13,9 @@ Welcome to the Analysis and Design of Algorithms (ADA) repository! This reposito
 7. [Graph Algorithms](Notes/graph_algorithms)
 
 ### Codes
-1. [Binary Search Iterative](#Binary_Search_Iterative.c)
-2. [Binary Search Recursive](#Binary_Search_Recursive.c)
-3. [Selection Sort](#Selection_Sort.c)
+1. [Binary Search Iterative](Codes/Binary_Search_Iterative.c)
+2. [Binary Search Recursive](Codes/Binary_Search_Recursive.c)
+3. [Selection Sort](Codes/Selection_Sort.c)
 4. [Quick Sort](#Quick_Sort.c)
 5. [Merge Sort](#Merge_Sort.c)
 6. [Fractional Knapsack](#Fractional_Knapsack.c)
